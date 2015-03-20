@@ -38,7 +38,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Breeze.ContextProvider, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Breeze.Server.ContextProvider.1.5.0\lib\Breeze.ContextProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi2, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Breeze.Server.WebApi2.1.5.0\lib\Breeze.WebApi2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -48,6 +86,18 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.OData.5.2.2\lib\net45\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -55,14 +105,463 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivator, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\admin\admin.html" />
+    <Content Include="app\admin\admin.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\common\bootstrap\bootstrap.dialog.js" />
+    <Content Include="app\common\common.js" />
+    <Content Include="app\common\logger.js" />
+    <Content Include="app\common\spinner.js" />
+    <Content Include="app\config.exceptionHandler.js" />
+    <Content Include="app\config.js" />
+    <Content Include="app\config.route.js" />
+    <Content Include="app\dashboard\dashboard.html" />
+    <Content Include="app\dashboard\dashboard.js" />
+    <Content Include="app\layout\shell.html" />
+    <Content Include="app\layout\shell.js" />
+    <Content Include="app\layout\sidebar.html" />
+    <Content Include="app\layout\sidebar.js" />
+    <Content Include="app\layout\topnav.html" />
+    <Content Include="app\layout\widgetheader.html" />
+    <Content Include="app\services\datacontext.js" />
+    <Content Include="app\services\directives.js" />
+    <Content Include="app\services\entityManagerFactory.js" />
+    <Content Include="App_Data\SGNDB.mdf" />
+    <Content Include="App_Data\SGNDB_log.ldf">
+      <DependentUpon>SGNDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\css\documenter_style.css" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\css\img\info.png" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\css\img\warning.png" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\images\image_1.png" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\images\little-neko.jpg" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\jquery.easing.js" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\jquery.js" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\jquery.scrollTo.js" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\assets\js\script.js" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\favicon.ico" />
+    <Content Include="Content\AshleyTemplate\documentation-v1.5\index.html" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\js\npm.js" />
+    <Content Include="Content\AshleyTemplate\files\coming-soon.html" />
+    <Content Include="Content\AshleyTemplate\files\css\blue.css" />
+    <Content Include="Content\AshleyTemplate\files\css\coffee.css" />
+    <Content Include="Content\AshleyTemplate\files\css\colors.css" />
+    <Content Include="Content\AshleyTemplate\files\css\green.css" />
+    <Content Include="Content\AshleyTemplate\files\css\layout.css" />
+    <Content Include="Content\AshleyTemplate\files\css\light.css" />
+    <Content Include="Content\AshleyTemplate\files\css\orange.css" />
+    <Content Include="Content\AshleyTemplate\files\css\pink.css" />
+    <Content Include="Content\AshleyTemplate\files\css\purple.css" />
+    <Content Include="Content\AshleyTemplate\files\css\red.css" />
+    <Content Include="Content\AshleyTemplate\files\css\sea-green.css" />
+    <Content Include="Content\AshleyTemplate\files\css\yellow.css" />
+    <Content Include="Content\AshleyTemplate\files\features.html" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\animation.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\custom-icons-codes.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\custom-icons-embedded.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\custom-icons-ie7-codes.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\custom-icons-ie7.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\css\custom-icons.css" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\demo.html" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\font\custom-icons.svg" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\LICENSE.txt" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\README.txt" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon-114x114.png" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon-144x144.png" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon-57x57.png" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon-72x72.png" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\files\images\apple-touch-icon.png" />
+    <Content Include="Content\AshleyTemplate\files\images\favicon.ico" />
+    <Content Include="Content\AshleyTemplate\files\images\icon-map.png" />
+    <Content Include="Content\AshleyTemplate\files\images\loading.gif" />
+    <Content Include="Content\AshleyTemplate\files\images\main-logo-big.png" />
+    <Content Include="Content\AshleyTemplate\files\images\main-logo.png" />
+    <Content Include="Content\AshleyTemplate\files\images\neko-logo.png" />
+    <Content Include="Content\AshleyTemplate\files\images\news\news1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\news\news2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\news\news3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\carousel-1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\carousel-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\carousel-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\img-fullwidth-1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\img-fullwidth-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign5.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign6.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign7.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign8.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\vign9.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom5.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom6.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom7.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom8.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\portfolio\zoom9.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\team\pic1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\team\pic2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\team\pic3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\team\pic4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\big-city.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\home-girl.png" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\loader.gif" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-blue-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-blue-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-grey-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-grey-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-orange-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-orange-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-sea-green-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-sea-green-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-yellow-2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\paralax-yellow-3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\theme-pics\services.png" />
+    <Content Include="Content\AshleyTemplate\files\images\works\footer-work1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\images\works\footer-work2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\index-animated.html" />
+    <Content Include="Content\AshleyTemplate\files\index-fullscreen.html" />
+    <Content Include="Content\AshleyTemplate\files\index.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\animation-framework\animate.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\animation-framework\animate.min.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\appear\jquery.appear.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\appear\nekoAnim.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\easing\jquery.easing.1.3.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\flexslider.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\images\bg_direction_nav.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\jquery.flexslider.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\themes\himalaya-flexslider-theme.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\flexslider\themes\slider-overlay.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\hoverdir\css\style.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\hoverdir\jquery.hoverdir.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\in-view\jquery.inview.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\isotope\css\style.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\isotope\jquery.isotope.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\isotope\jquery.isotope.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\isotope\jquery.isotope.sloppy-masonry.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery-cookie\jquery.cookie.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery-ui\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\countdownBasic.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\countdownGlowing.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\countdownLED.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ar.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bg.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bn.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bs.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ca.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-cs.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-cy.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-da.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-de.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-el.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-es.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-et.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fa.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fi.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fr.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-gl.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-gu.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-he.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hr.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hu.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hy.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-id.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-it.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ja.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-kn.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ko.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-lt.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-lv.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ml.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ms.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-my.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-nb.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-nl.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-pl.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-pt-BR.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ro.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ru.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sk.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sl.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sq.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sr-SR.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sr.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sv.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-th.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-tr.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-uk.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-uz.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-vi.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-zh-CN.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-zh-TW.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.sharrre-1.3.4\index.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.sharrre-1.3.4\jquery.sharrre-1.3.4.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.sharrre-1.3.4\jquery.sharrre-1.3.4.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.sharrre-1.3.4\sharrre.php" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery\1.8.3\jquery.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery\jquery.1.10.2.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\magnific-popup\magnific-popup.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\css\cmxformTemplate.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\ajax-loader.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\bg-1.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\bg-2.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\bg-3.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\error.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\img\success.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\cmxformTemplate.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\jquery.form.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\jquery.validate.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\jquery.validate.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\_BCK\jquery.form.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\_BCK\jquery.validate.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\js\_BCK\jquery.validate.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\php\form-handler-quotation.php" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\php\form-handler.php" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\php\image.php" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\css\bootstrapTheme.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\css\custom.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\css\responsive.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\ico\favicon.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\AjaxLoader.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\controls.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\css3.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\feather.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\grab.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\modern.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\multi.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\responsive.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\tons.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\touch.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\demo-slides\zombie.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\glyphicons-halflings-green.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\glyphicons-halflings.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\img\owl-logo.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\application.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\bootstrap-collapse.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\bootstrap-tab.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\bootstrap-transition.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\google-code-prettify\run_prettify.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\assets\js\jquery-1.9.1.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\changelog.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage5.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage6.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\fullimage7.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl1.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl2.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl3.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl4.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl5.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl6.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl7.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\assets\owl8.jpg" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\autoHeight.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\click.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\custom.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\customJson.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\full.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\images.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\json.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\lazyLoad.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\navOnTop.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\navOnTop2.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\one.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\progressBar.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\randomOrder.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\transitions.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\index.html" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\AjaxLoader.gif" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\grabbing.png" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\owl.carousel-MODIFIED.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\owl.carousel.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\owl.carousel.min-MODIFIED.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\owl.theme.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\owl-carousel\owl.transitions.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\pageSlide\jquery.pageslide-custom.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\pageSlide\jquery.pageslide.css" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\parallax\js\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\parallax\js\jquery.scrollTo-1.4.3.1-min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\parallax\js\jquery.stellar.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\parallax\js\jquery.stellar.min-ie.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\parallax\js\jquery.stellar.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\respond\respond.min.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\respond\respond.src.js" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\smoothscroll\SmoothScroll.js" />
+    <Content Include="Content\AshleyTemplate\files\js\custom-isotope-height.js" />
+    <Content Include="Content\AshleyTemplate\files\js\custom.js" />
+    <Content Include="Content\AshleyTemplate\files\js\modernizr-2.6.1.min.js" />
+    <Content Include="Content\AshleyTemplate\files\portfolio-project-fullwidth-carousel.html" />
+    <Content Include="Content\AshleyTemplate\files\portfolio-project-fullwidth-image.html" />
+    <Content Include="Content\AshleyTemplate\files\portfolio-project-fullwidth-video.html" />
+    <Content Include="Content\AshleyTemplate\home\404.html" />
+    <Content Include="Content\AshleyTemplate\home\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\home\apple-touch-icon-114x114.png" />
+    <Content Include="Content\AshleyTemplate\home\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="Content\AshleyTemplate\home\apple-touch-icon-72x72.png" />
+    <Content Include="Content\AshleyTemplate\home\crossdomain.xml" />
+    <Content Include="Content\AshleyTemplate\home\css\main.css" />
+    <Content Include="Content\AshleyTemplate\home\css\normalize.css" />
+    <Content Include="Content\AshleyTemplate\home\humans.txt" />
+    <Content Include="Content\AshleyTemplate\home\img\bg-body.png" />
+    <Content Include="Content\AshleyTemplate\home\img\bg_home.png" />
+    <Content Include="Content\AshleyTemplate\home\img\home-screen-animated.png" />
+    <Content Include="Content\AshleyTemplate\home\img\home-screen-coming-soon.png" />
+    <Content Include="Content\AshleyTemplate\home\img\home-screen-fullscreen.png" />
+    <Content Include="Content\AshleyTemplate\home\img\home-screen-one-page.png" />
+    <Content Include="Content\AshleyTemplate\home\js\main.js" />
+    <Content Include="Content\AshleyTemplate\home\js\plugins.js" />
+    <Content Include="Content\AshleyTemplate\home\js\vendor\jquery-1.8.0.min.js" />
+    <Content Include="Content\AshleyTemplate\home\js\vendor\modernizr-2.6.1.min.js" />
+    <Content Include="Content\AshleyTemplate\home\robots.txt" />
+    <Content Include="Content\AshleyTemplate\index.html" />
+    <Content Include="Content\AshleyTemplate\update.txt" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\breeze.directives.css" />
+    <Content Include="Content\customtheme.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\ie10mobile.css" />
+    <Content Include="Content\images\AngularJS-small.png" />
+    <Content Include="Content\images\breezelogo.png" />
+    <Content Include="Content\images\FollowMe.png" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\SGBG_320.png" />
+    <Content Include="Content\images\SGBG_550.png" />
+    <Content Include="Content\images\SGBG_768.png" />
+    <Content Include="Content\images\SGBG_960.png" />
+    <Content Include="Content\images\Tree.png" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\AshleyTemplate\files\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\config.json" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\font\custom-icons.eot" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\font\custom-icons.ttf" />
+    <Content Include="Content\AshleyTemplate\files\font-icons\custom-icons\font\custom-icons.woff" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\jquery.sharrre-1.3.4\README.md" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\neko-contact-ajax-plugin\arial.ttf" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\.htaccess" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\json\customData.json" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\demos\json\data.json" />
+    <Content Include="Content\AshleyTemplate\files\js-plugin\owl.carousel\LICENSE" />
+    <Content Include="Content\AshleyTemplate\home\doc\contribute.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\crossdomain.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\css.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\extend.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\faq.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\htaccess.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\html.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\js.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\misc.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\README.md" />
+    <Content Include="Content\AshleyTemplate\home\doc\usage.md" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\breeze.intellisense.js" />
+    <Content Include="Scripts\breeze.angular.js" />
+    <Content Include="Scripts\breeze.debug.js" />
+    <Content Include="Scripts\breeze.directives.js" />
+    <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\breeze.saveErrorExtensions.js" />
+    <Content Include="Scripts\breeze.to%24q.shim.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\q.js" />
+    <Content Include="Scripts\q.min.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Scripts\spin.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.min.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Scripts\toastr.min.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -70,6 +569,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
